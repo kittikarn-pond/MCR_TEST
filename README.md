@@ -35,14 +35,16 @@
    composer install
    ```
 
-2. **ตั้งค่า `.env`** — ใช้ไฟล์ `.env` ที่แนบมา หรือคัดลอกจากตัวอย่าง
+2. **ตั้งค่า `.env`** — ไฟล์ `.env` **แนบมาใน repo นี้แล้ว** (ตั้งค่า MySQL ของ XAMPP ไว้ให้) จึงไม่ต้องคัดลอกหรือสร้าง key ใหม่ ตรวจเฉพาะ `DB_PORT` / `DB_USERNAME` / `DB_PASSWORD` ให้ตรงกับ MySQL ในเครื่องของคุณ
 
-   ```bash
-   cp .env.example .env
-   php artisan key:generate
-   ```
+   > ถ้าไม่มีไฟล์ `.env` (เช่น ถูกลบไป) ให้สร้างใหม่จากตัวอย่าง:
+   >
+   > ```bash
+   > cp .env.example .env
+   > php artisan key:generate
+   > ```
 
-   ค่า Database เริ่มต้น (ค่าเริ่มต้นของ XAMPP — **XAMPP ในเครื่องผู้พัฒนาใช้พอร์ต 3307** ปรับ `DB_PORT` ให้ตรงกับเครื่องของคุณ เช่น `3306`):
+   ค่า Database ใน `.env` ที่แนบมา (ค่าเริ่มต้นของ XAMPP — **XAMPP ในเครื่องผู้พัฒนาใช้พอร์ต 3307** ปรับ `DB_PORT` ให้ตรงกับเครื่องของคุณ เช่น `3306`):
 
    ```env
    DB_CONNECTION=mysql
